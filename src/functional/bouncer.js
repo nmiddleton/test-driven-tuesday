@@ -24,8 +24,15 @@
  */
 
 'use strict';
+
+
 module.exports = function bouncer(guestList) {
-    return function(guests) {
-        // return ...
+    return function (guests) {
+        return guests.every(function (GuestItem) {
+           return guestList.some(function (ListItem) {
+                 return GuestItem.id === ListItem.id;
+            });
+        });
     };
 };
+
