@@ -33,7 +33,7 @@ chai.use(sinonChai);
 
 describe('Functional Programming', function() {
 
-    describe.skip('uppercase', function() {
+    describe('uppercase', function() {
 
         it('returns an upper-case version of the string provided', function() {
             // pure function, no side effects
@@ -43,7 +43,7 @@ describe('Functional Programming', function() {
 
     describe('Higher-order functions', function() {
 
-        describe.skip('repeat', function() {
+        describe('repeat', function() {
 
             /*
                 Iteration (looping) in functional languages is usually accomplished via recursion.
@@ -72,7 +72,7 @@ describe('Functional Programming', function() {
 
         describe('Array#map', function() {
 
-            describe.skip('doubleAll', function() {
+            describe('doubleAll', function() {
 
                 it('doubles the value of each element of the input array', function() {
                     var numbers        = [ 0, 1, 2, 3, 4,  9,  8,  7,  6,  5 ],
@@ -85,7 +85,7 @@ describe('Functional Programming', function() {
 
         describe('Array#filter', function() {
 
-            describe.skip('onlyShort', function() {
+            describe.only('onlyShort', function() {
                 // generates an object { message: body } where body has no more characters than maxCharacters
                 function message(maxCharacters) { return { message: loremIpsum({ units: 'words', count: Math.floor(maxCharacters / 2) }).substr(0, maxCharacters) }; }
 
@@ -101,8 +101,7 @@ describe('Functional Programming', function() {
                         longMessage()
                     ];
 
-                    var shortMessages = onlyShort(messages);
-
+1
                     expect(shortMessages).to.have.lengthOf(1);
                     expect(shortMessages[0]).to.have.length.below(50);
                 });

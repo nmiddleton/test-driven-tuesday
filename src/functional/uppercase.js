@@ -1,5 +1,5 @@
 'use strict';
 
-module.exports = function(text) {
-    // return ...
+module.exports = function uppercase (text_in) {
+    return text_in.toUpperCase();
 };
