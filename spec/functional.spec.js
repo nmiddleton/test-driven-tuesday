@@ -18,17 +18,17 @@ var chai       = require('chai'),
 chai.use(sinonChai);
 
 /*
-    Functional programming is based on a simple premise with far-fetching implications:
-    - we construct our programs using only Pure Functions
-    In other words, functions that have no side effects.
+ Functional programming is based on a simple premise with far-fetching implications:
+ - we construct our programs using only Pure Functions
+ In other words, functions that have no side effects.
 
-    Functional programming is a restriction on how we write programs,
-    but not on what programs we can write.
+ Functional programming is a restriction on how we write programs,
+ but not on what programs we can write.
 
-    It turns out that accepting this restriction is tremendously beneficial
-    because of the increase in modularity that we gain from programming with pure functions.
-    Because of this modularity, pure functions are easier to test, to reuse, to parallelise,
-    to generalise and to reason about.
+ It turns out that accepting this restriction is tremendously beneficial
+ because of the increase in modularity that we gain from programming with pure functions.
+ Because of this modularity, pure functions are easier to test, to reuse, to parallelise,
+ to generalise and to reason about.
  */
 
 describe('Functional Programming', function() {
@@ -46,16 +46,16 @@ describe('Functional Programming', function() {
         describe('repeat', function() {
 
             /*
-                Iteration (looping) in functional languages is usually accomplished via recursion.
-                Recursive functions invoke themselves, allowing an operation to be performed over
-                and over until the base case is reached.
+             Iteration (looping) in functional languages is usually accomplished via recursion.
+             Recursive functions invoke themselves, allowing an operation to be performed over
+             and over until the base case is reached.
 
-                Though some recursion requires maintaining a stack,
-                tail recursion can be recognised
-                and optimised by a compiler into the same code used to implement iteration in imperative
-                languages
+             Though some recursion requires maintaining a stack,
+             tail recursion can be recognised
+             and optimised by a compiler into the same code used to implement iteration in imperative
+             languages
 
-                http://stackoverflow.com/questions/33923/what-is-tail-recursion
+             http://stackoverflow.com/questions/33923/what-is-tail-recursion
              */
 
             it('calls a given function "n" times', function() {
@@ -101,7 +101,8 @@ describe('Functional Programming', function() {
                         longMessage()
                     ];
 
-1
+                    var shortMessages = onlyShort(messages);
+
                     expect(shortMessages).to.have.lengthOf(1);
                     expect(shortMessages[0]).to.have.length.below(50);
                 });
@@ -110,7 +111,7 @@ describe('Functional Programming', function() {
 
         describe('Array#every Array#some', function() {
 
-            describe.skip('bouncer', function() {
+            describe('bouncer', function() {
 
                 it('lets a group of guests in if all the guests are on the guestList', function() {
                     var guestList = [
@@ -151,7 +152,7 @@ describe('Functional Programming', function() {
 
         describe('Array#reduce', function() {
 
-            describe.skip('stocktaker', function() {
+            describe('stocktaker', function() {
 
                 it('calculates quantities of fruits', function() {
                     var fruits = [ 'apple', 'banana', 'orange', 'orange', 'orange', 'banana' ];
