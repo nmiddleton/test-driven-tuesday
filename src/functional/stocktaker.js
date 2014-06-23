@@ -19,5 +19,13 @@
 
 'use strict';
 module.exports = function(inventory) {
-    // return ...
+    var myobj = {};
+    inventory.reduce(function (prev, elem) {
+        if (myobj.hasOwnProperty(elem)){
+            myobj[elem] = myobj[elem] + 1;
+        }else{
+            myobj[elem] =  1;
+        }
+    },0);
+    return myobj;
 };
