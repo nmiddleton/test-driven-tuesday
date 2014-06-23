@@ -31,6 +31,6 @@
  */
 
 'use strict';
-module.exports = function reduce(list, fn, initial) {
-    // return ...
+module.exports = function reduce( list, fn, initial){
+        return list.reduce(fn, initial);
 };
