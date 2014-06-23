@@ -35,5 +35,11 @@
 
 'use strict';
 module.exports = function onlyShort(messages) {
-    // return ...
+    // Filter out the short messages that return TRUE
+    var newarray = messages.filter(function(el) {
+        return el.message.length < 50;
+    });
+    return newarray.map( function(elem){
+        return elem.message;
+    })
 };
