@@ -33,6 +33,7 @@ module.exports = function bouncer(guestList) {
                  return GuestItem.id === ListItem.id;
             });
         });
+
     };
 };
 
