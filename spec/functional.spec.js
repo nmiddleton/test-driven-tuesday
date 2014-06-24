@@ -85,7 +85,7 @@ describe('Functional Programming', function() {
 
         describe('Array#filter', function() {
 
-            describe.only('onlyShort', function() {
+            describe.skip('onlyShort', function() {
                 // generates an object { message: body } where body has no more characters than maxCharacters
                 function message(maxCharacters) { return { message: loremIpsum({ units: 'words', count: Math.floor(maxCharacters / 2) }).substr(0, maxCharacters) }; }
 
@@ -172,7 +172,7 @@ describe('Functional Programming', function() {
                     return previous + current;
                 }
 
-                describe.skip('implements Array#reduce using recursion', function() {
+                describe.only('implements Array#reduce using recursion', function() {
 
                     it('performs reduction of an array with one element', function() {
                         expect(reduce([ 1 ], summarise, 0)).to.equal(1);
