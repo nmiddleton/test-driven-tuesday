@@ -43,5 +43,14 @@
 'use strict';
 
 module.exports = function duckCount() {
-    // return ...;
+    return Array.prototype.slice.call(arguments, 0).reduce(function (n, object) {return n + Object.prototype.hasOwnProperty.call(object, 'quack');},0);
+
+    // Change the arguments to a real array by using Array.prototype and sending the context of arguments
+    //return Array.prototype.slice.call(arguments, 0).
+        // Now it is an array we can use reduce to perform a function on each member
+        //reduce(function (n, object) {
+            // Function to keep a count (initialised at }.0); of the objects that have a property of quack
+           // return n + Object.prototype.hasOwnProperty.call(object, 'quack');
+       // },0);
+
 };

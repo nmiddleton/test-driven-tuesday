@@ -172,7 +172,7 @@ describe('Functional Programming', function() {
                     return previous + current;
                 }
 
-                describe.only('implements Array#reduce using recursion', function() {
+                describe.skip('implements Array#reduce using recursion', function() {
 
                     it('performs reduction of an array with one element', function() {
                         expect(reduce([ 1 ], summarise, 0)).to.equal(1);
@@ -203,7 +203,7 @@ describe('Functional Programming', function() {
 
     describe('"Borrowing" functionality', function() {
 
-        describe.skip('call', function() {
+        describe.only('call', function() {
             function duck() {
                 return { quack: true };
             }
