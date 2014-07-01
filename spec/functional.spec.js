@@ -261,7 +261,7 @@ describe('Functional Programming', function() {
             });
         });
 
-        describe.only('Partial application without Function::bind', function() {
+        describe.skip('Partial application without Function::bind', function() {
             var log = require('../src/functional/log_without_bind'),
                 consoleLog;
 
@@ -304,7 +304,7 @@ describe('Functional Programming', function() {
             });
         });
 
-        describe.skip('Partial application with Function::bind', function() {
+        describe.only('Partial application with Function::bind', function() {
             var log = require('../src/functional/log_with_bind'),
                 consoleLog;
 
