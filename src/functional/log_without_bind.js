@@ -54,5 +54,5 @@
 var slice = Array.prototype.slice;
 
 module.exports = function log(namespace) {
-    // return ...
-};
+    return function(){console.log.apply(this, [namespace].concat(slice.call(arguments,0)))};
+}
