@@ -9,25 +9,42 @@ var chai       = require('chai'),
 
 chai.use(sinon_chai);
 
-describe('Greeter', function() {
+var ThreeAM = moment({hour:3,minute:0});
+var EightAM = moment({hour:8,minute:0});
+var ThreePM = moment({hour:15,minute:0});
+var EightPM = moment({hour:20,minute:0});
 
-    var Greeter = require('../src/greeter');
+describe.only('Greeter', function() {
 
-    it.skip('says "Good morning!" before 5 AM and noon', function() {
+    var Greeter = rewire('../src/greeter');
+
+
+    it('says "Good morning!" before 5 AM and noon', function() {
+
+        Greeter.__set__('moment', function(){ return EightAM});
         var greeter = new Greeter();
 
-        expect(greeter.greet()).to.equal('good morning');
+        expect(greeter.greet()).to.equal('Good morning!');
     });
 
-    it.skip('says "Good afternoon!" between noon and 6 PM', function() {
+    it('says "Good afternoon!" between noon and 6 PM', function() {
+        Greeter.__set__('moment', function(){ return ThreePM});
+        var greeter = new Greeter();
 
+        expect(greeter.greet()).to.equal('Good afternoon!!');
     });
 
-    it.skip('says "Good evening!" between 6 PM and midnight', function() {
+    it('says "Good evening!" between 6 PM and midnight', function() {
+        Greeter.__set__('moment', function(){ return EightPM});
+        var greeter = new Greeter();
 
+        expect(greeter.greet()).to.equal('Good evening!!');
     });
 
-    it.skip('says "Hello!" between midnight and 5 AM', function() {
+    it('says "Hello!" between midnight and 5 AM', function() {
+        Greeter.__set__('moment', function(){ return ThreeAM});
+        var greeter = new Greeter();
 
+        expect(greeter.greet()).to.equal('Hello!');
     });
 });
