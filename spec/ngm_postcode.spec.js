@@ -2,7 +2,7 @@
 
 var expect   = require('chai').expect,
 
-    Postcode = require('../src/postcode');
+    Postcode = require('../src/ngm_postcode');
 
 describe.only ('Postcode', function() {
 
