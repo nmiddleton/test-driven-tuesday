@@ -16,7 +16,7 @@ var q              = require('q'),
 chai.use(chaiAsPromised);
 chai.use(sinonChai);
 
-describe.only('promises', function () {
+describe.skip('promises', function () {
 
     describe('the motivation', function () {
 

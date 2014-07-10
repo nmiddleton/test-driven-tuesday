@@ -14,7 +14,7 @@ var EightAM = moment({hour:8,minute:0});
 var ThreePM = moment({hour:15,minute:0});
 var EightPM = moment({hour:20,minute:0});
 
-describe.only('Greeter', function() {
+describe.skip('Greeter', function() {
 
     var Greeter = rewire('../src/greeter');
 
