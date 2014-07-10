@@ -6,7 +6,7 @@ var expect = require('chai').expect,
     // our stuff
     examples = require('../src/objects_under_construction');
 
-describe('Objects under construction', function() {
+describe.skip('Objects under construction', function() {
 
     var original_title = 'a title of a document',
         expected_title = 'A Title Of A Document',
